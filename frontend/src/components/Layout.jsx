@@ -7,6 +7,7 @@ const navItems = [
   { to: '/scanner', label: 'Scanner', icon: '◻' },
   { to: '/graph', label: 'Network', icon: '⬡' },
   { to: '/qr', label: 'My QR', icon: '▣' },
+  { to: '/google', label: 'Google', icon: 'G' },
 ];
 
 export default function Layout() {

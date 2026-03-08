@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 
 from .database import init_db
-from .routes import contacts, events, tags, followups, scanning
+from .routes import contacts, events, tags, followups, scanning, google_contacts
 
 
 @asynccontextmanager
@@ -27,6 +27,7 @@ app.include_router(events.router)
 app.include_router(tags.router)
 app.include_router(followups.router)
 app.include_router(scanning.router)
+app.include_router(google_contacts.router)
 
 
 @app.get("/health")

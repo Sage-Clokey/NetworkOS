@@ -8,6 +8,7 @@ import Scanner from './pages/Scanner';
 import NetworkGraph from './pages/NetworkGraph';
 import QRPage from './pages/QRPage';
 import PublicConnect from './pages/PublicConnect';
+import GoogleContacts from './pages/GoogleContacts';
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/scanner" element={<Scanner />} />
           <Route path="/graph" element={<NetworkGraph />} />
           <Route path="/qr" element={<QRPage />} />
+          <Route path="/google" element={<GoogleContacts />} />
         </Route>
       </Routes>
     </BrowserRouter>
