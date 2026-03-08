@@ -179,12 +179,13 @@ async def get_graph(db=Depends(get_db)):
 
 @router.get("/qr")
 async def generate_qr(base_url: str = "http://localhost:5173"):
-    """Generate a QR code pointing to the public /connect form."""
+    """Generate a QR code for the given URL (full URL passed from frontend)."""
     import qrcode
     import io
     import base64
 
-    url = f"{base_url}/connect"
+    # base_url is now the full connect URL passed from the frontend
+    url = base_url
     qr = qrcode.QRCode(version=1, box_size=10, border=4)
     qr.add_data(url)
     qr.make(fit=True)

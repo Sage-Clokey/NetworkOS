@@ -3,7 +3,8 @@ import { getQR } from '../services/api';
 
 export default function QRPage() {
   const [qrData, setQrData] = useState(null);
-  const [baseUrl, setBaseUrl] = useState(window.location.origin);
+  const connectUrl = `${window.location.origin}${window.location.pathname}#/connect`;
+  const [baseUrl, setBaseUrl] = useState(connectUrl);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
