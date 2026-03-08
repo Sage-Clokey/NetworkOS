@@ -147,6 +147,11 @@ export default function GoogleContacts() {
         </div>
       )}
 
+      {/* Loading */}
+      {status === null && (
+        <div className="card text-center py-14 text-gray-400">Connecting to backend...</div>
+      )}
+
       {/* Not connected */}
       {status && !status.connected && (
         <div className="card text-center py-14">
